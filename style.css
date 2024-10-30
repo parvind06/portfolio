@@ -7,6 +7,7 @@ body {
     line-height: 1.6;
     text-align: center; 
 }
+
 #experience ul {
     list-style-type: none;
     padding-left: 0;
@@ -49,6 +50,7 @@ nav ul {
     background-color: #004080;
     margin: 0;
     padding: 10px;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -82,7 +84,7 @@ h2 {
     margin-bottom: 20px;
     border-bottom: 2px solid #ffcc00;
     padding-bottom: 10px;
-     text-align: center; 
+    text-align: center; 
 }
 
 .skills-grid {
@@ -131,12 +133,12 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Other styles remain the same */
-
 .project-gallery {
     display: flex;
     gap: 10px;
     margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .project-gallery img {
@@ -173,4 +175,65 @@ a.btn {
 
 a.btn:hover {
     background-color: #ffcc00;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .icon {
+        width: 80px;
+        height: 80px;
+        margin-left: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    section {
+        padding: 20px;
+        margin: 10px auto;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .project-gallery img {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-gallery img {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    a.btn {
+        padding: 8px 16px;
+    }
 }
