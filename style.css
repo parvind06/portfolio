@@ -101,12 +101,22 @@ h2 {
     font-weight: bold;
 }
 
-.project, .testimonial {
-    margin-bottom: 40px;
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
 }
-
-.project h3, .testimonial p {
-    color: #333;
+.project-gallery img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+.project-gallery img:hover {
+    transform: scale(1.05);
 }
 
 blockquote {
